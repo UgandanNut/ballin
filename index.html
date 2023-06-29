@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login</title>
+    <link href="login.css" rel="stylesheet">
+    
+    
+    <script>
+     function login() {
+       
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+          
+        if (localStorage.getItem(username) === password) {
+           
+          window.location.href = "welcome.html";
+        } else {
+            alert("invalid user or password");
+            }
+        }
+
+    </script>
+    
+</head>
+<body>
+   
+    
+    <form>
+        
+        <div class="username">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        </div>
+        
+        <div class="password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        </div>
+        
+        <div class="button">
+        <input type="button" value="Login" onclick="login()"> 
+        </div>
+        
+        <div class="bg">
+        <img src="bg-city.png">
+        </div>
+
+    </form>
+     
+    <div class="register">
+            <a href="register.html">REGISTER</a>
+            </div>
+
+</body>
+</html>
